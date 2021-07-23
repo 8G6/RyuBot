@@ -9,6 +9,6 @@ let config_voice = {
     //'volume':{volume: 1},
     'voice':'UK English Male'
 }
-
+let current='';
 wait('All varables loaded')
 let final;

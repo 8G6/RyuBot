@@ -119,8 +119,12 @@ let age = ()=>{
 }
 
 let speak=function(){ 
+  console.log(current,final)
   text=final ? final : 'You told me nothing,or its my bug , reload or try saying it louder'
-  responsiveVoice.speak(text,config_voice.voice,config_voice.pitch,config_voice.volume)
+  if(final!=current){
+    responsiveVoice.speak(text,config_voice.voice,config_voice.pitch,config_voice.volume)
+  }
+  current=final
 }
 
 setInterval(function() {
@@ -142,3 +146,7 @@ let spk=function(a){
   responsiveVoice.speak('You selected '+a.value,a.value,config_voice.pitch,config_voice.volume)
   config_voice.voice=a.value
 }
+// refresh=()=>{
+//   if(!responsiveVoice.isPlaying()) window.location.reload()
+// }
+// setInterval(refresh,12000)

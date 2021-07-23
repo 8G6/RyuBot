@@ -9,7 +9,8 @@ let fast = ()=>{
 function decition(){
     let prob = sp.resultConfidence * 100
     let text=sp.resultString.toLowerCase()
-    id('ytext').innerHTML=`Text : ${text} <br> Confidence : ${prob.toFixed(4)}%`
+    
+    
     if(prob>60){
         if(text.match(/can you hear me/g)) final = "yes sir, I certainly could"
         if(text.match(/hello/g)) final=greet()
@@ -20,6 +21,7 @@ function decition(){
     else{
         final=`I am ${prob.toFixed(4)}% sure that you said ${text}`
     }
+    id('ytext').innerHTML=`Text : ${text} <br> Confidence : ${prob.toFixed(4)}%`
     id('text').innerHTML=final
     clk('#dummy')
     if(navigator.appVersion.match('android')) responsiveVoice.enableWindowClickHook();
