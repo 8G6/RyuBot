@@ -1,0 +1,96 @@
+<head>
+	<title>Ryu Bot</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+echo "# Ryubot" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/8G6/Ryubot.git
+git push -u origin main
+<script src="js/libs/p5.min.js"></script>
+<script src="js/libs/p5.dom.js"></script>
+<script src="js/libs/p5.speech.js"></script>
+<script src="js/libs/responsive-voice.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/vars.js"></script>
+<script src="js/logic.js"></script>
+<script src="js/config.js"></script>
+<br>
+<div id="panel">
+	<div id="h1"></div>
+    <img width="350px" height="350px" id="ryu" src="pics/bot/pic.png">
+    <table align="center">
+        <tr>
+            <td>Select A Voice</td>
+            <td>:</td>
+            <td id="voice_ver">
+                
+            </td>
+        </tr>
+        <!--
+        <tr>
+            <td>Rate of Speaking </td>
+            <td>:</td>
+            <td>
+                <input type="range" min="0" oninput="set()" max="2000" id="rate">
+            </td>
+        </tr>
+    -->
+        <tr>
+            <td>Pitch of Speaking</td>
+            <td>: </td>
+            <td>
+                <input type="range" min="0" max="2000" id="pitch">
+            </td>
+        </tr>
+        <!--
+        <tr>
+            <td>Voloume of Speaking</td>
+            <td>: </td>
+            <td>
+                <input type="range" min="0" max="111" id="volume">
+            </td>
+        </tr>
+        -->
+        <tr>
+            <td>Fast Mode (Experimental)</td>
+            <td>: </td>
+            <td>
+                <input type="checkbox" onclick="fast()" id="fast">
+            </td>
+        </tr>
+        <tr>
+            <td>What I Heard</td>
+            <td>:</td>
+            <td id="ytext"></td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="speak()">
+                  give me voice
+                </button>
+            </td>
+            <td>:</td>
+            <td id="text">
+                
+            </td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>:</td>
+            <td id="status"></td>
+        </tr>
+    </table>
+    <br>
+	
+	<br>
+    <button  onclick="set()" class="box">
+        adjust pitch
+    </button>
+</div>
+<script src="js/sel.js"></script>
+</body>
