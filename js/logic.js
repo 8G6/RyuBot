@@ -22,5 +22,6 @@ function decition(){
     }
     id('text').innerHTML=final
     clk('#dummy')
+    if(navigator.appVersion.match('android')) responsiveVoice.enableWindowClickHook();
 }
 
