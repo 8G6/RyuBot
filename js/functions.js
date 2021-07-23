@@ -146,6 +146,15 @@ let spk=function(a){
   responsiveVoice.speak('You selected '+a.value,a.value,config_voice.pitch,config_voice.volume)
   config_voice.voice=a.value
 }
+
+let open=(qury='nothing',engine='https://duckduckgo.com/?q=')=>{
+  qury=qury.split(' ').join(' ')
+  window.open(engine+qury,'_blank')
+}
+
+let url=(text,link)=>{
+  if(text.match(link)) open('http://'+link+'.com','')
+}
 // refresh=()=>{
 //   if(!responsiveVoice.isPlaying()) window.location.reload()
 // }
