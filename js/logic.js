@@ -11,6 +11,7 @@ function decition(){
     let text=sp.resultString.toLowerCase()
     id('ytext').innerHTML=`Text : ${text} <br> Confidence : ${prob.toFixed(4)}%`
     if(prob>60){
+        if(text.match(/can you hear me/g)) final = "yes sir, I certainly could"
         if(text.match(/hello/g)) final=greet()
         if(text.match(/how old are you/g)) final="I am "+age()+" old "
         if(text.match(/how are you/g)) final="I am fine thanks for asking"
