@@ -5,6 +5,9 @@
 			position: fixed;
 			right: 35%;
 		}
+		#dummy{
+			display:none;
+		}
 		table,tr{
            border: collapse;
 		   border: solid 1px black;
