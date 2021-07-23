@@ -15,10 +15,12 @@ function decition(){
         if(text.match(/hello/g)) final=greet()
         if(text.match(/how old are you/g)) final="I am "+age()+" old "
         if(text.match(/how are you/g)) final="I am fine thanks for asking"
+        if(text.match(/who are you/g) || text.match(/your name/g)) final="I am Ryu Bot , a fully functinal non AI bot"
     }
     else{
         final=`I am ${prob.toFixed(4)}% sure that you said ${text}`
     }
     id('text').innerHTML=final
+    clk('#dummy')
 }
 

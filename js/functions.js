@@ -59,7 +59,7 @@ function std(seconds){
     return array[Math.floor(Math.random() * array.length)]
   
   }
-
+clk = (a)=>{try{document.querySelector(a).click()}catch(e){}}
 function sel(b) {
     return b.options[b.selectedIndex].value
 }
