@@ -24,6 +24,9 @@ function decition(){
     id('ytext').innerHTML=`Text : ${text} <br> Confidence : ${prob.toFixed(4)}%`
     id('text').innerHTML=final
     clk('#dummy')
-    if(navigator.appVersion.match('android')) responsiveVoice.enableWindowClickHook();
+    if(navigator.appVersion.match('android')){
+        responsiveVoice.enableWindowClickHook()
+        responsiveVoice.clickEvent();
+    }
 }
 
