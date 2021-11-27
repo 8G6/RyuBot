@@ -127,7 +127,8 @@ let speak=function(){
   current=final
 }
 
-setInterval(function() {
+k=setInterval(function() {
+    clearInterval(k)
   if (responsiveVoice.isPlaying() == true) {
       if (i == 3) {
           i = 1
