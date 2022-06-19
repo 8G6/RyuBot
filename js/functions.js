@@ -1,7 +1,6 @@
 
 wait('functons.js loaded',0.801)
 
-
 function std(seconds){
     var mel  = Math.floor(seconds / (24*60*60*365*1000));
     seconds -= mel    * (24*60*60*365*1000);  
@@ -118,18 +117,12 @@ let age = ()=>{
   return std((new Date().getTime()-new Date("April 20, 2021 10:00:00").getTime())/1000)
 }
 
-let speak=function(){ 
-  console.log(current,final)
-  text=final ? final : 'You told me nothing,or its my bug , reload or try saying it louder'
-  if(final!=current){
-    responsiveVoice.speak(text,config_voice.voice,config_voice.pitch,config_voice.volume)
-  }
-  current=final
+let speak=function(final){ 
+  responsiveVoice.speak(final,config_voice.voice,config_voice.pitch,config_voice.volume)
 }
 
-k=setInterval(function() {
-    clearInterval(k)
-  if (responsiveVoice.isPlaying() == true) {
+inter=setInterval(function() {
+  if (responsiveVoice.isPlaying()) {
       if (i == 3) {
           i = 1
       } else {
@@ -140,12 +133,13 @@ k=setInterval(function() {
   } else {
       id('status').innerHTML='Ryu is listning'
       id('ryu').src = image[0]
-}
-},1000)
+  }
+},750)
 
 let spk=function(a){ 
   responsiveVoice.speak('You selected '+a.value,a.value,config_voice.pitch,config_voice.volume)
   config_voice.voice=a.value
+  console.log(config_voice)
 }
 
 let open=(qury='nothing',engine='https://duckduckgo.com/?q=')=>{
@@ -156,7 +150,4 @@ let open=(qury='nothing',engine='https://duckduckgo.com/?q=')=>{
 let url=(text,link)=>{
   if(text.match(link)) open('http://'+link+'.com','')
 }
-// refresh=()=>{
-//   if(!responsiveVoice.isPlaying()) window.location.reload()
-// }
-// setInterval(refresh,12000)
+

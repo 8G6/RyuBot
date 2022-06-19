@@ -7,8 +7,8 @@ let i=0
 let config_voice = {
     'pitch':{pitch: 1},
     //'volume':{volume: 1},
-    'voice':'UK English Male'
+    'voice':'US English Female'
 }
 let current='';
 wait('All varables loaded')
-let final;
+
