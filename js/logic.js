@@ -27,7 +27,6 @@ async function decition(){
             .then(response => response.json())
             .then(response => {
                 speak(response.AIResponse)
-                setTimeout(()=>{responsiveVoice.allowSpeechClicked(true)},100)
             })
             .catch(err => console.error(err));
     }
