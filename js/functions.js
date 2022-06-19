@@ -133,6 +133,7 @@ inter=setInterval(function() {
   } else {
       id('status').innerHTML='Ryu is listning'
       id('ryu').src = image[0]
+      sp.start();
   }
 },750)
 

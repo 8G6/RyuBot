@@ -11,7 +11,7 @@ async function decition(){
     let prob = sp.resultConfidence * 100
     let text=sp.resultString.toLowerCase()
     
-    id('ytext').innerHTML=`Text : ${text} <br> Confidence : ${prob.toFixed(4)}%`
+    id('text').innerHTML=`Text : ${text} <br> Confidence : ${prob.toFixed(4)}%`
     
     if(prob>25){
         const options = {
