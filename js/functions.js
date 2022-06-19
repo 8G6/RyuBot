@@ -129,11 +129,11 @@ inter=setInterval(function() {
           i += 1
       }
       id('ryu').src = image[i]
-      id('status').innerHTML='Ryu is speaking'
+      id('status').innerHTML='Ryu is speaking<br><img width="50px" height="50px" id="spk" src="pics/speaker.gif">'
   } else {
-      id('status').innerHTML='Ryu is listning'
+      id('status').innerHTML='Ryu is speaking<br><img width="50px" height="50px" id="spk" src="pics/mic.gif">'
       id('ryu').src = image[0]
-      sp.start();
+      // try{sp.start()}catch(e){}
   }
 },750)
 

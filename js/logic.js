@@ -6,6 +6,7 @@ let fast = ()=>{
     sp.interimResults=id('fast').checked
 }
 let final=''
+
 async function decition(){
 
     let prob = sp.resultConfidence * 100
@@ -13,7 +14,7 @@ async function decition(){
     
     id('text').innerHTML=`Text : ${text} <br> Confidence : ${prob.toFixed(4)}%`
     
-    if(prob>25){
+    if(prob>0){
         const options = {
             method: 'GET',
             headers: {
